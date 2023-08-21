@@ -1,0 +1,10 @@
+C:\Users\HP\source\repos\Negocios\bin\Debug\Negocios.dll.config
+C:\Users\HP\source\repos\Negocios\bin\Debug\Negocios.dll
+C:\Users\HP\source\repos\Negocios\bin\Debug\Negocios.pdb
+C:\Users\HP\source\repos\Negocios\bin\Debug\Entidad.dll
+C:\Users\HP\source\repos\Negocios\bin\Debug\Entidad.pdb
+C:\Users\HP\source\repos\Negocios\obj\Debug\Negocios.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\HP\source\repos\Negocios\obj\Debug\Negocios.dll
+C:\Users\HP\source\repos\Negocios\obj\Debug\Negocios.pdb

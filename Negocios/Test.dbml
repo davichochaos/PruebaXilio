@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Test" Class="TestDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DAVICHOCHAOS\SQLEXPRESS;Initial Catalog=Test;Integrated Security=True" SettingsObjectName="Negocios.Properties.Settings" SettingsPropertyName="TestConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Maquinaria" Member="Maquinarias">
+    <Type Name="Maquinaria">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Serie" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Maquinaria_Asignacione" Member="Asignaciones" ThisKey="Id" OtherKey="IdMaquinaria" Type="Asignacione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Empleados" Member="Empleados">
+    <Type Name="Empleado">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Cargo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Area" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Empleado_Asignacione" Member="Asignaciones" ThisKey="Id" OtherKey="IdEmpleado" Type="Asignacione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Asignaciones" Member="Asignaciones">
+    <Type Name="Asignacione">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdEmpleado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMaquinaria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Empleado_Asignacione" Member="Empleado" ThisKey="IdEmpleado" OtherKey="Id" Type="Empleado" IsForeignKey="true" />
+      <Association Name="Maquinaria_Asignacione" Member="Maquinaria" ThisKey="IdMaquinaria" OtherKey="Id" Type="Maquinaria" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
